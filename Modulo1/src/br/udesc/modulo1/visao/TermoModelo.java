@@ -1,9 +1,9 @@
 
-package br.udesc.modulo1.view;
+package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-import model.Termo;
+import br.udesc.sqlite.modelo.Termo;
 
 /**
  *
@@ -52,7 +52,7 @@ public class TermoModelo extends AbstractTableModel {
         Termo termo = listaTermos.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return termo.getPalavra();
+                return termo.getTermo();
         }
 
         return null;

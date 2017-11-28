@@ -1,8 +1,8 @@
 package br.udesc.modulo1.controle;
 
-import br.udesc.modulo1.view.TabelaNoticia;
-import br.udesc.modulo1.view.TelaInicial;
-import br.udesc.modulo1.view.TabelaSite;
+import br.udesc.modulo1.visao.TabelaNoticia;
+import br.udesc.modulo1.visao.TelaInicial;
+import br.udesc.modulo1.visao.TabelaSite;
 import java.awt.Window;
 import static org.omg.CORBA.ORB.init;
 

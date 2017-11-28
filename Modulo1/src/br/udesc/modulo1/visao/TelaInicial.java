@@ -1,5 +1,5 @@
 
-package br.udesc.modulo1.view;
+package br.udesc.modulo1.visao;
 
 /**
  *

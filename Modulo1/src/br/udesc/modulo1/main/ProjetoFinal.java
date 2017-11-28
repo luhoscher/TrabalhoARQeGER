@@ -1,5 +1,5 @@
 
-package projeto.pkgfinal;
+package br.udesc.modulo1.main;
 
 /**
  *

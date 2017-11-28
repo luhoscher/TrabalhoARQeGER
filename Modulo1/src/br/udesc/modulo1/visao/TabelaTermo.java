@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.udesc.modulo1.view;
+package br.udesc.modulo1.visao;
 
 /**
  *
  * @author gabrielnaoto
  */
-public class TabelaSite extends javax.swing.JFrame {
+public class TabelaTermo extends javax.swing.JFrame {
 
     /**
      * Creates new form WindowNews
      */
-    public TabelaSite() {
+    public TabelaTermo() {
         initComponents();
     }
 
@@ -39,7 +39,7 @@ public class TabelaSite extends javax.swing.JFrame {
         setBackground(new java.awt.Color(102, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 18)); // NOI18N
-        jLabel1.setText("Sites");
+        jLabel1.setText("Termos");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

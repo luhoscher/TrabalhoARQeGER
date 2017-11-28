@@ -1,9 +1,9 @@
 
-package br.udesc.modulo1.view;
+package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-import model.Noticia;
+import  br.udesc.sqlite.modelo.Noticia;
 
 /**
  *
@@ -54,7 +54,7 @@ public class NoticiaModelo extends AbstractTableModel {
             case 0:
                 return obj.getTitulo();
             case 1:
-                return obj.getLink();
+                return obj.getUrl();
         }
 
         return null;

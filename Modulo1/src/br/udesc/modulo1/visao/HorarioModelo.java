@@ -1,9 +1,9 @@
 
-package br.udesc.modulo1.view;
+package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-import model.Horario;
+import br.udesc.sqlite.modelo.Horario;
 
 /**
  *
@@ -52,7 +52,7 @@ public class HorarioModelo extends AbstractTableModel{
         Horario horario = listaHorario.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return horario.getHorario();
+                return horario.getData();
         }
 
         return null;

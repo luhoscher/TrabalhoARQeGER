@@ -1,45 +1,45 @@
 
-package br.udesc.modulo1.view;
+package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-import model.Email;
+import br.udesc.sqlite.modelo.Site;
 
 /**
  *
  * @author Nando
  */
-public class EmailModelo extends AbstractTableModel {
+public class SiteModelo extends AbstractTableModel {
 
-    private ArrayList<Email> listaEmail = null;
+    private ArrayList<Site> listaSites = null;
 
-    public EmailModelo() {
-        listaEmail = new ArrayList<Email>();
+    public SiteModelo() {
+        listaSites = new ArrayList<Site>();
 
     }
 
-    public void AddEmail(Email Objeto) {
-        listaEmail.add(Objeto);
-        fireTableRowsInserted(listaEmail.size() - 1, listaEmail.size() - 1);
+    public void AddSite(Site Objeto) {
+        listaSites.add(Objeto);
+        fireTableRowsInserted(listaSites.size() - 1, listaSites.size() - 1);
     }
 
     public void Limpar() {
-        listaEmail.clear();
+        listaSites.clear();
     }
 
-    public Email GetPosition(int posicao) {
-        return listaEmail.get(posicao);
+    public Site GetPosition(int posicao) {
+        return listaSites.get(posicao);
 
     }
 
     public void Excluir(int Posicao) {
-        listaEmail.remove(Posicao);
+        listaSites.remove(Posicao);
         fireTableRowsDeleted(Posicao, Posicao);
     }
 
     @Override
     public int getRowCount() {
-        return listaEmail.size();
+        return listaSites.size();
     }
 
     @Override
@@ -49,10 +49,10 @@ public class EmailModelo extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Email email = listaEmail.get(rowIndex);
+        Site site = listaSites.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return email.getEmail();
+                return site.getUrl();
         }
 
         return null;
@@ -63,7 +63,7 @@ public class EmailModelo extends AbstractTableModel {
     public String getColumnName(int column) {
         switch (column) {
             case 0:
-                return "Email";
+                return "Url";
         }
 
         return "";
