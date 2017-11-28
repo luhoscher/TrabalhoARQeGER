@@ -20,7 +20,7 @@ public class SQLite {
             return null;
         }
     }
-   
+
     public static void criar() {
         Statement stmt = null;
         try {
@@ -44,9 +44,10 @@ public class SQLite {
                     + "	id integer PRIMARY KEY AUTOINCREMENT\n"
                     + "	url varchar(50),\n"
                     + ");\n"
-                     + "CREATE TABLE IF NOT EXISTS email ( \n"
+                    + "CREATE TABLE IF NOT EXISTS email ( \n"
                     + "	id integer PRIMARY KEY AUTOINCREMENT\n"
                     + "	email varchar(50),\n"
+                    + "	senha varchar(50),\n"
                     + ");\n";
             stmt.executeUpdate(sql);
             System.out.println("Tabela criada com sucesso");

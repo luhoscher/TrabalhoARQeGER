@@ -1,4 +1,3 @@
-
 package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
@@ -44,7 +43,7 @@ public class EmailModelo extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 1;
+        return 2;
     }
 
     @Override
@@ -53,6 +52,8 @@ public class EmailModelo extends AbstractTableModel {
         switch (columnIndex) {
             case 0:
                 return email.getEmail();
+            case 1:
+                return email.getSenha();
         }
 
         return null;
@@ -64,6 +65,8 @@ public class EmailModelo extends AbstractTableModel {
         switch (column) {
             case 0:
                 return "Email";
+            case 1:
+                return "Senha";
         }
 
         return "";

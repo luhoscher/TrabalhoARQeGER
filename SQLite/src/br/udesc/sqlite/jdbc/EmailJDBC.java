@@ -17,7 +17,7 @@ public class EmailJDBC {
             c = SQLite.iniciarConexao();
             declaracao = c.createStatement();
             String sql = "INSERT INTO Email (email) "
-                    + "VALUES ('" + email.getEmail() + "');";
+                    + "VALUES ('" + email.getEmail() + "', " + email.getSenha() + "');";
             System.out.println(sql);
             declaracao.executeUpdate(sql);
             declaracao.close();
@@ -52,9 +52,11 @@ public class EmailJDBC {
             while (rs.next()) {
                 int i = rs.getInt("id");
                 String email = rs.getString("email");
+                String senha = rs.getString("senha");
                 s = new Email();
                 s.setId(id);
                 s.setEmail(email);
+                s.setSenha(senha);
             }
             rs.close();
             declaracao.close();
@@ -77,9 +79,11 @@ public class EmailJDBC {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String email = rs.getString("email");
+                String senha = rs.getString("senha");
                 Email e = new Email();
                 e.setId(id);
                 e.setEmail(email);
+                e.setSenha(senha);
                 emails.add(e);
             }
             rs.close();
