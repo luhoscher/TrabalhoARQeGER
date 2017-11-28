@@ -25,17 +25,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         itemSite = new javax.swing.JMenu();
-        cadastrarSite = new javax.swing.JMenuItem();
-        excluirSite = new javax.swing.JMenuItem();
-        editarSite = new javax.swing.JMenuItem();
         itemTermo = new javax.swing.JMenu();
-        cadastrarTermo = new javax.swing.JMenuItem();
-        excluirTermo = new javax.swing.JMenuItem();
-        editarTermo = new javax.swing.JMenuItem();
-        itemAssunto = new javax.swing.JMenu();
-        cadastrarAssunto = new javax.swing.JMenuItem();
-        excluirAssunto = new javax.swing.JMenuItem();
-        editarAssunto = new javax.swing.JMenuItem();
         itemNoticia = new javax.swing.JMenu();
         consultarTitulo = new javax.swing.JMenuItem();
         consultarLink = new javax.swing.JMenuItem();
@@ -48,63 +38,10 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenuBar1.setName(""); // NOI18N
 
         itemSite.setText("Site");
-
-        cadastrarSite.setText("Cadastrar");
-        itemSite.add(cadastrarSite);
-
-        excluirSite.setText("Excluir");
-        itemSite.add(excluirSite);
-
-        editarSite.setText("Editar");
-        editarSite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarSiteActionPerformed(evt);
-            }
-        });
-        itemSite.add(editarSite);
-
         jMenuBar1.add(itemSite);
 
         itemTermo.setText("Termos");
-
-        cadastrarTermo.setText("Cadastrar");
-        cadastrarTermo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarTermoActionPerformed(evt);
-            }
-        });
-        itemTermo.add(cadastrarTermo);
-
-        excluirTermo.setText("Excluir");
-        itemTermo.add(excluirTermo);
-
-        editarTermo.setText("Editar");
-        editarTermo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarTermoActionPerformed(evt);
-            }
-        });
-        itemTermo.add(editarTermo);
-
         jMenuBar1.add(itemTermo);
-
-        itemAssunto.setText("Assuntos");
-
-        cadastrarAssunto.setText("Cadastrar");
-        itemAssunto.add(cadastrarAssunto);
-
-        excluirAssunto.setText("Excluir");
-        itemAssunto.add(excluirAssunto);
-
-        editarAssunto.setText("Editar");
-        editarAssunto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarAssuntoActionPerformed(evt);
-            }
-        });
-        itemAssunto.add(editarAssunto);
-
-        jMenuBar1.add(itemAssunto);
 
         itemNoticia.setText("Noticias");
 
@@ -143,22 +80,6 @@ public class TelaInicial extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void editarSiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarSiteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editarSiteActionPerformed
-
-    private void editarTermoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarTermoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editarTermoActionPerformed
-
-    private void cadastrarTermoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarTermoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cadastrarTermoActionPerformed
-
-    private void editarAssuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarAssuntoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editarAssuntoActionPerformed
-
     private void consultarTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarTituloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_consultarTituloActionPerformed
@@ -173,18 +94,8 @@ public class TelaInicial extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JMenuItem cadastrarAssunto;
-    public javax.swing.JMenuItem cadastrarSite;
-    public javax.swing.JMenuItem cadastrarTermo;
     public javax.swing.JMenuItem consultarLink;
     public javax.swing.JMenuItem consultarTitulo;
-    public javax.swing.JMenuItem editarAssunto;
-    public javax.swing.JMenuItem editarSite;
-    public javax.swing.JMenuItem editarTermo;
-    public javax.swing.JMenuItem excluirAssunto;
-    public javax.swing.JMenuItem excluirSite;
-    public javax.swing.JMenuItem excluirTermo;
-    private javax.swing.JMenu itemAssunto;
     private javax.swing.JMenu itemNoticia;
     private javax.swing.JMenu itemSite;
     private javax.swing.JMenu itemTermo;
