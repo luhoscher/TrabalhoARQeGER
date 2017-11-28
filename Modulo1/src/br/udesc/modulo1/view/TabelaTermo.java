@@ -9,12 +9,12 @@ package br.udesc.modulo1.view;
  *
  * @author gabrielnaoto
  */
-public class TabelaTermos extends javax.swing.JFrame {
+public class TabelaTermo extends javax.swing.JFrame {
 
     /**
      * Creates new form WindowNews
      */
-    public TabelaTermos() {
+    public TabelaTermo() {
         initComponents();
     }
 
