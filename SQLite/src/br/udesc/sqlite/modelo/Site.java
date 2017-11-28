@@ -28,6 +28,5 @@ public class Site {
     public void setUrl(String url) {
         this.url = url;
     }
-    
-    
+
 }

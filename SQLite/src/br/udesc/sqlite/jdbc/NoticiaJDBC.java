@@ -12,7 +12,7 @@ import br.udesc.sqlite.modelo.Noticia;
 import br.udesc.sqlite.util.SQLite;
 
 public class NoticiaJDBC {
-         
+
     public void inserir(Noticia not) {
         Connection c = null;
         Statement declaracao = null;
@@ -21,7 +21,7 @@ public class NoticiaJDBC {
             declaracao = c.createStatement();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
             String sql = "INSERT INTO NOTICIA (url, titulo, data) "
-                    + "VALUES ('" + not.getUrl() + "', '" + not.getTitulo()+ "', " + sdf.format(not.getData()) + "');";
+                    + "VALUES ('" + not.getUrl() + "', '" + not.getTitulo() + "', " + sdf.format(not.getData()) + "');";
             declaracao.executeUpdate(sql);
             declaracao.close();
             System.out.println("Criado com sucesso");
@@ -62,7 +62,7 @@ public class NoticiaJDBC {
             return null;
         }
     }
-     
+
     public Noticia ultimaNoticia(int id) {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;

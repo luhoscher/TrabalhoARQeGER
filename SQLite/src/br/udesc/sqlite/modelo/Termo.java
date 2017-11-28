@@ -28,7 +28,5 @@ public class Termo {
     public void setTermo(String termo) {
         this.termo = termo;
     }
-    
-    
 
 }

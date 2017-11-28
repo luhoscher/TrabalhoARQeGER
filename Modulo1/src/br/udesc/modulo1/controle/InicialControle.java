@@ -23,14 +23,14 @@ public class InicialControle {
     private String unscheduler;
 
     public InicialControle() {
-      //  inicial = new TelaInicial();
+        //  inicial = new TelaInicial();
         site = new TabelaSite();
         noticia = new TabelaNoticia();
         init();
     }
 
     public void run() {
-      //  inicial.setVisible(true);
+        //  inicial.setVisible(true);
         noticia.setVisible(true);
     }
 

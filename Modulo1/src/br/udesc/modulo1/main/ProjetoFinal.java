@@ -1,4 +1,3 @@
-
 package br.udesc.modulo1.main;
 
 /**
@@ -13,5 +12,5 @@ public class ProjetoFinal {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

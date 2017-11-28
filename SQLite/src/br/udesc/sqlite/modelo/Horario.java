@@ -29,5 +29,5 @@ public class Horario {
 
     public void setData(Date data) {
         this.data = data;
-    }    
+    }
 }

@@ -1,4 +1,3 @@
-
 package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
@@ -9,9 +8,9 @@ import br.udesc.sqlite.modelo.Horario;
  *
  * @author Nando
  */
-public class HorarioModelo extends AbstractTableModel{
-    
-     private ArrayList<Horario> listaHorario = null;
+public class HorarioModelo extends AbstractTableModel {
+
+    private ArrayList<Horario> listaHorario = null;
 
     public HorarioModelo() {
         listaHorario = new ArrayList<Horario>();
@@ -68,5 +67,5 @@ public class HorarioModelo extends AbstractTableModel{
 
         return "";
     }
-    
+
 }

@@ -88,7 +88,7 @@ public class TermoJDBC {
             return null;
         }
     }
-    
+
     public boolean atualizar(Termo ter) {
         Connection c = null;
         Statement declaracao = null;

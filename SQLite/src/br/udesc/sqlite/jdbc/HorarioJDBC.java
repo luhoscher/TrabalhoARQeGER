@@ -32,7 +32,6 @@ public class HorarioJDBC {
         System.out.println("Criado com sucesso");
     }
 
-     
     public boolean deletar(int id) {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
@@ -45,7 +44,7 @@ public class HorarioJDBC {
             return false;
         }
     }
-     
+
     public Horario encontrar(int id) {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
@@ -71,7 +70,6 @@ public class HorarioJDBC {
         }
     }
 
-     
     public List<Horario> listar() {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
@@ -97,7 +95,7 @@ public class HorarioJDBC {
             return null;
         }
     }
-    
+
     public boolean atualizar(Horario hora) {
         Connection c = null;
         Statement declaracao = null;

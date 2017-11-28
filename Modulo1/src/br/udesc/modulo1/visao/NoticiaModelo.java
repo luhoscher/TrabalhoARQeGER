@@ -1,9 +1,8 @@
-
 package br.udesc.modulo1.visao;
 
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
-import  br.udesc.sqlite.modelo.Noticia;
+import br.udesc.sqlite.modelo.Noticia;
 
 /**
  *

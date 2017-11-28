@@ -9,7 +9,7 @@ import br.udesc.sqlite.modelo.Email;
 import br.udesc.sqlite.util.SQLite;
 
 public class EmailJDBC {
-    
+
     public void inserir(Email email) {
         Connection c = null;
         Statement declaracao = null;
@@ -40,7 +40,7 @@ public class EmailJDBC {
             return false;
         }
     }
-     
+
     public Email encontrar(int id) {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
@@ -67,7 +67,6 @@ public class EmailJDBC {
         }
     }
 
-     
     public List<Email> listar() {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
@@ -94,7 +93,7 @@ public class EmailJDBC {
             return null;
         }
     }
-    
+
     public boolean atualizar(Email email) {
         Connection c = null;
         Statement declaracao = null;
