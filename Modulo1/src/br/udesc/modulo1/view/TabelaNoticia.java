@@ -9,12 +9,12 @@ package br.udesc.modulo1.view;
  *
  * @author gabrielnaoto
  */
-public class TabelaNoticias extends javax.swing.JFrame {
+public class TabelaNoticia extends javax.swing.JFrame {
 
     /**
      * Creates new form WindowNews
      */
-    public TabelaNoticias() {
+    public TabelaNoticia() {
         initComponents();
     }
 
