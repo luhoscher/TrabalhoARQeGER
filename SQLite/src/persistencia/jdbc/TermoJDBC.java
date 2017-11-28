@@ -10,7 +10,7 @@ import persistencia.util.SQLite;
 
 public class TermoJDBC {
 
-    public void insert(Termo object) {
+    public void inserir(Termo object) {
         Connection c = null;
         Statement declaracao = null;
         try {
