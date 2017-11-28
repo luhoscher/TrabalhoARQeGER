@@ -1,23 +1,24 @@
-package persistencia.jdbc;
+package br.udesc.sqlite.jdbc;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import persistencia.modelo.Termo;
-import persistencia.util.SQLite;
+import br.udesc.sqlite.modelo.Email;
+import br.udesc.sqlite.util.SQLite;
 
-public class TermoJDBC {
-
-    public void inserir(Termo object) {
+public class EmailJDBC {
+    
+    public void inserir(Email email) {
         Connection c = null;
         Statement declaracao = null;
         try {
             c = SQLite.iniciarConexao();
             declaracao = c.createStatement();
-            String sql = "INSERT INTO SUBJECT (termo) "
-                    + "VALUES ('" + object.getTermo() + "');";
+            String sql = "INSERT INTO Email (email) "
+                    + "VALUES ('" + email.getEmail() + "');";
+            System.out.println(sql);
             declaracao.executeUpdate(sql);
             declaracao.close();
 
@@ -33,27 +34,27 @@ public class TermoJDBC {
         try {
             c = SQLite.iniciarConexao();
             declaracao = c.createStatement();
-            return declaracao.executeUpdate("DELETE FROM termo WHERE id = " + id + ";") > 0;
+            return declaracao.executeUpdate("DELETE FROM email WHERE id = " + id + ";") > 0;
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             return false;
         }
     }
-
-    public Termo encontrar(int id) {
+     
+    public Email encontrar(int id) {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
         try {
             c = SQLite.iniciarConexao();
             declaracao = c.createStatement();
-            ResultSet rs = declaracao.executeQuery("SELECT * FROM termo WHERE id = " + id + ";");
-            Termo s = null;
+            ResultSet rs = declaracao.executeQuery("SELECT * FROM email WHERE id = " + id + ";");
+            Email s = null;
             while (rs.next()) {
                 int i = rs.getInt("id");
-                String termo = rs.getString("termo");
-                s = new Termo();
-                s.setId(i);
-                s.setTermo(termo);
+                String email = rs.getString("email");
+                s = new Email();
+                s.setId(id);
+                s.setEmail(email);
             }
             rs.close();
             declaracao.close();
@@ -64,40 +65,41 @@ public class TermoJDBC {
         }
     }
 
-    public List<Termo> listar() {
+     
+    public List<Email> listar() {
         Connection c = SQLite.iniciarConexao();
         Statement declaracao = null;
         try {
             c = SQLite.iniciarConexao();
             declaracao = c.createStatement();
-            ResultSet rs = declaracao.executeQuery("SELECT * FROM termo;");
-            List<Termo> termos = new ArrayList<>();
+            ResultSet rs = declaracao.executeQuery("SELECT * FROM email;");
+            List<Email> emails = new ArrayList<>();
             while (rs.next()) {
                 int id = rs.getInt("id");
-                String termo = rs.getString("termo");
-                Termo s = new Termo();
-                s.setId(id);
-                s.setTermo(termo);
-                termos.add(s);
+                String email = rs.getString("email");
+                Email e = new Email();
+                e.setId(id);
+                e.setEmail(email);
+                emails.add(e);
             }
             rs.close();
             declaracao.close();
-            return termos;
+            return emails;
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             return null;
         }
     }
     
-    public boolean atualizar(Termo object) {
+    public boolean atualizar(Email email) {
         Connection c = null;
         Statement declaracao = null;
         try {
             c = SQLite.iniciarConexao();
             declaracao = c.createStatement();
-            String sql = "UPDATE SUBJECT SET "
-                    + "termo = '" + object.getTermo() + "'"
-                    + "WHERE id = " + object.getId() + ";";
+            String sql = "UPDATE SCHEDULE SET "
+                    + "email = '" + email.getEmail() + "'"
+                    + "WHERE id = " + email.getId() + ";";
             return declaracao.executeUpdate(sql) > 0;
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

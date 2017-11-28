@@ -1,4 +1,4 @@
-package persistencia.util;
+package br.udesc.sqlite.util;
 
 import java.sql.*;
 

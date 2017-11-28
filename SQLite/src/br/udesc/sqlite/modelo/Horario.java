@@ -1,4 +1,4 @@
-package persistencia.modelo;
+package br.udesc.sqlite.modelo;
 
 import java.util.Date;
 

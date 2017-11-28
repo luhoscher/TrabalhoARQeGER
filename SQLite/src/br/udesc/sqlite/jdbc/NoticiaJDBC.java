@@ -1,4 +1,4 @@
-package persistencia.jdbc;
+package br.udesc.sqlite.jdbc;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,8 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import persistencia.modelo.Noticia;
-import persistencia.util.SQLite;
+import br.udesc.sqlite.modelo.Noticia;
+import br.udesc.sqlite.util.SQLite;
 
 public class NoticiaJDBC {
          

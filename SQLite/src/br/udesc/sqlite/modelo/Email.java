@@ -1,4 +1,4 @@
-package persistencia.modelo;
+package br.udesc.sqlite.modelo;
 
 public class Email {
 

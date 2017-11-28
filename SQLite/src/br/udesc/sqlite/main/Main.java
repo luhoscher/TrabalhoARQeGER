@@ -1,6 +1,6 @@
-package persistencia.main;
+package br.udesc.sqlite.main;
 
-import persistencia.util.SQLite;
+import br.udesc.sqlite.util.SQLite;
 
 public class Main {
     public static void main(String[] args) {        
